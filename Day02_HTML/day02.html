@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Demo HTML ngay 02</title>
+	</head>
+	<body>
+		&nbsp;&nbsp;&nbsp;&nbsp;abc
+		<table border="1" cellspacing="0" cellpadding="9">
+			<tr>
+				<th>tiêu đề 1</th>
+				<th>tiêu đề 2</th>
+				<th>tiêu đề 3</th>
+			</tr>
+			<tr>
+				<td>hàng 1 côt 1</td>
+				<td>hàng 1 côt 2</td>
+				<td>hàng 1 côt 3</td>
+				<td>hàng 1 côt 4</td>
+			</tr>
+			<tr>
+				<td>hàng 2 côt 1</td>
+				<td>hàng 2 cột 2</td>
+				<td>hàng 2 côt 3</td>
+				<td>hàng 2 côt 4</td>
+			</tr>
+			<tr>
+				<td>hàng 3 côt 1</td>
+				<td>hàng 3 côt 2</td>
+				<td>hàng 3 côt 3</td>
+				<td>hàng 3 côt 4</td>
+			</tr>
+		</table>
+		<hr>
+		<table  border="1" cellspacing="0" cellpadding="9">
+
+			<tr>
+				<td colspan="3">hàng 1 côt 1</td>
+				<td>hàng 1 côt 2</td>
+				<!-- <td>hàng 1 côt 3</td>
+				<td>hàng 1 côt 4</td> -->
+			</tr>
+			<tr>
+				<td rowspan="2">hàng 2 côt 1</td>
+				<td>hàng 2 cột 2</td>
+				<td>hàng 2 côt 3</td>
+				<td>hàng 2 côt 4</td>
+			</tr>
+			<tr>
+				<!-- <td>hàng 3 côt 1</td> -->
+				<td>hàng 3 côt 2</td>
+				<td>hàng 3 côt 3</td>
+				<td>hàng 3 côt 4</td>
+			</tr>
+		</table>
+		<hr>
+			<ol>
+				<li>thẻ li thứ nhất</li>
+				<li>thẻ li thứ nhị</li>
+				<li>thẻ li thứ tam</li>
+			</ol>
+
+			<ul style="list-style: none">
+				<li>&hearts; thẻ li thứ nhất</li>
+				<li>thẻ li thứ nhị</li>
+				<li>thẻ li thứ tam</li>
+			</ul>
+
+			<a href="https://google.com.vn" target="_blank">google</a>
+			<a href="dinhlong.html" target="blank">Day 01 </a>
+			<hr>
+			<form action="" method="post">
+				Nhập tên của bạn:<input type="text">
+				<input type="submit" value="Gửi thông tin">
+				
+			</form>
+
+			<form action="" method="post">
+				Nhập username:<input type="text" name="username"
+				value="user mặc định"><br>
+
+				Nhập tuổi:<input type="number" name="age" placeholder="Nhập tuổi của bạn"><br>
+				Nhập mật khẩu:<input type="password">
+				Chọn nghề nghiệp:<input type="checkbox" value="1"
+				checked>DEV
+				<input type="checkbox" value="2">2
+				<input type="checkbox" value="3">3
+				<input type="checkbox" value="4">4
+				<br>
+				Chọn giới tính:<input type="radio" name="gender" value="1">Nam
+				<input type="radio" name="gender"value="2">Nữ
+				<br>
+				Chọn 1 quốc gia:<select>
+					<option value="1">VN</option>
+					<option value="2">Korea</option>
+					<option value="3">Japan</option>
+				</select>
+
+				chọn nhiều:
+				<select multiple>
+					<option value="1">VN</option>
+					<option value="2">Korea</option>
+					<option value="3">Japan</option>
+				</select>
+				<br>
+				chọn file:
+				<input type="file" multiple="">
+				<br>
+				Nhập dữ liệu trên nhiều dòng:
+				<textarea rows="15" cols="10" placeholder="Nhập trên nhiều dòng"></textarea>
+
+				<input type="submit" value="send info">
+
+				 <button type="submit">a</button>
+				 <input type="reset" value="Reset from">
+			</form>
+			<hr>
+			<form action="" method="post">
+				<label for="abc">username</label>
+				<br>
+				<br>
+				<br>
+				<input type="text" id="abc">
+
+				<!-- for của label = id input  -->
+			</form>
+			<form action="" method="get">
+				<fieldset>
+					<legend>Huyền thoại</legend>
+					<input type="text" value="text">
+				</fieldset>
+			</form>
+		<!-- 	<iframe src="https://google.com.vn"></iframe> -->
+
+		
+	</body>
+</html>
