@@ -11,20 +11,61 @@
 			padding: 1%;
 		}
 		#div1{
-			background: lightblue; 
+			background: lightblue;
+			float: left; 
 		}
 		.h3 {
-			color: red
+			color: red;
+			display: inline;
 		}
 		#ul1{
 			color: red
 		}
 
 		#div2{
-			background: green
+			background: green;
+			float: left;
 		}
 		#div3{
 			background: red
+		}
+		#div4 {
+	    background: #F4F4F4;
+	    border: solid;
+	    border-color: #CBCBCB;
+	    border-top: 0px;
+	    border-left: 0px;
+	    border-right: 0px;
+		}
+		#div5{
+			background: #CCCCFF;
+		}
+		#div5-1 {
+		    border: 2px dashed;
+		}
+		.p1{
+			padding-left: 35px;
+		}
+		th{
+			background: gray;
+		}
+		.td1001{
+			background: #ABE113;
+
+		}
+		#img1 {
+		    width: 300px;
+		    height: 300px;
+		    border-radius: 150px;
+		}
+		#input2{
+			background: #FFFFA0;
+		}
+		legend{
+			color:#0077C9 
+		}
+		#iputsend {
+		    border: 2px groove lightblue;
 		}
 	</style>
 	<div id="div1">
@@ -67,7 +108,7 @@
 <br>
 	<div>
 	<form action="" method="">
-		<img src="bt4.png">
+		<img src="bt4.png"> 
 		<h3 class="h3">Employee Registration From</h3>
 		<table>
 		<tr>
@@ -216,6 +257,137 @@
 	</table>
 </div>
 <p><i>Made<sub>5</sub> April <sub>2004</sub></i></p>
+<br><br><br>
+	
 
+	<div>
+		<div id="div4">
+			<center>
+			<h1>Learning JavaScrip</h1>
+			<p>for Absolute Beginner</p>
+			</center>
+		</div>
+		<center>
+
+			<table>
+				<tr>
+					<td>First Name</td>
+					<td><input type="text" ></td>
+				</tr>
+				<tr>
+					<td>Last Name </td>
+					<td><input type="text" ></td>
+				</tr>
+			</table>
+			Background <select>
+				<option>Red</option>
+				<option>Blue</option>
+			</select>
+			<br>
+			<input type="Submit" value="Submit">
+			</center>
+		</div>
+<br><br><br>
+	<div id="div5">
+		<h1>Sample Dictionary</h1>
+		<p>font-style</p>
+		<p class="p1">A CSS property which determines whether or not text it italicized</p>
+		<p>href</p>
+		<p class="p1">An HTML attribute which specifies the URL that link goes to.</p>
+	<div id="div5-1">
+		<p>justify</p>
+		<p class="p1">A CSS value which makes each line of text have equal width</p>
+	</div>
+		<p>table</p>
+		<p class="p1">An HTML tag which creates a table.</p>
+	</div>
+
+<br><br><br>
+
+	<div>
+		<table>
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Major</th>
+			</tr>
+			<tr>
+				<td class="td1001">1001</td>
+				<td class="td1001">Gopl Murthy</td>
+				<td class="td1001">Physics</td>
+			</tr>
+			<tr>
+				<td>1002</td>
+				<td>joy Sen</td>
+				<td>Economic</td>
+			</tr>
+			<tr>
+				<td class="td1001">1003</td>
+				<td class="td1001">Chandu Yadav</td>
+				<td class="td1001">Chemistry</td>
+			</tr>
+			<tr>
+				<td>1004</td>
+				<td>Shalini Gupta</td>
+				<td>Zoolofy</td>
+			</tr>
+			<tr>
+				<td class="td1001">1005</td>
+				<td class="td1001">Vivek Kumar</td>
+				<td class="td1001">Math</td>
+			</tr>
+			<tr>
+				<td>1004</td>
+				<td>Oleksandr "s1mple" Kostyliev</td>
+				<td>no major</td>
+			</tr>
+		</table>
+	</div>
+
+<br><br><br>
+
+	<div>
+		<img id="img1" src="bt3.png">
+	</div>
+<br><br><br>
+
+	<div>
+		<form>
+			<fieldset>
+				<legend>Personal Information</legend>
+				<table>
+					<tr>
+						<td><u>F</u>irst name:</td>
+						<td><input id="input2"type="text"></td>	
+					</tr>
+					<tr>
+						<td><u>L</u>ast name:</td>
+						<td><input id="input2"type="text"></td>	
+					</tr>
+					<tr>
+						<td><strong><u>E</u>mail:</strong></td>
+						<td><input id="input2"type="text"></td>	
+					</tr>
+					<tr>
+						<td></td>
+						<td>Your email address is safe with us, until we're acquired</td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset>
+				<legend>Comments</legend>
+				<table>
+					<tr>
+						<td><u>C</u>omment:</td>
+						<td><textarea rows="5" cols="20"></textarea></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><input type="Submit" value="Send" id="iputsend"> <input type="Reset" value="Reset"></td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+	</div>
 </body>
 </html>
