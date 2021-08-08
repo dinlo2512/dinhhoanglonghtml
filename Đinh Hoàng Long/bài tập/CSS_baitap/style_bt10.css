@@ -80,6 +80,8 @@
     background: #D2D2D2;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
+    margin-right: -6px;
+    padding: 4px;
 }
 .read-link {
     text-decoration: none;
@@ -89,6 +91,7 @@
     background: #E2E2E2;
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
+    padding: 4px;
 }
 .content-block {
     margin: 20px;
@@ -100,4 +103,7 @@
 .footer a{
 	color: #78A1DA;
 	text-decoration: none;
+}
+.read-more {
+    margin-bottom: 10px;
 }
