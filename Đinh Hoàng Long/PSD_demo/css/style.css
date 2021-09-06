@@ -1,0 +1,59 @@
+.header {
+    padding: 10px 0;
+    background: #2F2F2F;
+    color: #fff;
+}
+.container {
+    width: 70%;
+    margin: auto;
+}
+
+@font-face{
+	font-family: 'Pacifico-Regular';
+	src:url("../fonts/Pacifico-Regular.ttf");
+}
+.logo {
+    font-family: 'Pacifico-Regular';
+    font-size: 30px;
+    width: 30%;
+}
+ul{
+	list-style: none;
+}
+.row {
+    display: flex;
+}
+.menu{
+	width: 70%
+}
+.menu li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.menu a{
+	color: #fff;
+	text-decoration: none;
+	font-family:'Myriad Pro';
+}
+.learn-more {
+    color: #Fff;
+    background: #F99640;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.item-bg {
+    height: 130px;
+    background: black;
+}
+.center-item {
+    margin: 0 20px;
+    width: 33.33%;
+}
+.main-center .row{
+	margin: 0 -20px;
+}
