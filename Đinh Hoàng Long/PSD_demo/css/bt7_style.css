@@ -1,0 +1,103 @@
+body{
+	margin: auto;
+}
+.container {
+    margin: auto;
+}
+.header {
+    background: #2D2D30;
+}
+.row {
+    display: flex;
+}
+.logo {
+    width: 48%;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 155px;
+    padding-top: 14px;
+}
+.logo span{
+	font-size: 40px;
+	color: #7BB9B3;
+}
+.menu a{
+    color: #fff;
+    text-decoration: none;
+    font-family:'Lato';
+}
+.menu{
+	padding: 4px;
+}
+.menu ul {
+    list-style: none;
+    padding-top: 25px;
+    margin: auto;
+}
+.menu li{
+	display: inline-block;
+	padding-right: 15px;
+}
+.banner {
+	background-image: url("../images/bt7-banner.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  width: 1597px;
+  height: 664px
+}
+@font-face{
+	font-family: 'Sorts Mill Goudy-Regular';
+	src:url("../fonts/SortsMillGoudy-Regular.ttf");
+	font-family: 'Sorts Mill Goudy-Italic';
+	src:url("../fonts/SortsMillGoudy-Italic.ttf");
+}
+.dsa {
+    margin: auto;
+    font-size: 55px;
+    font-family: 'Lato';
+    padding: 214px 0 0 380px;
+}
+.asd {
+    font-size: 32px;
+    padding-left: 310px;
+    padding-top: 0px;
+    font-family: 'Sorts Mill Goudy';
+}
+.bt {
+    border: solid 1px;
+    padding: 15px;
+    width: 128px;
+    margin-left: 700px;
+    font-size: 20px;
+    font-family: 'Lato';
+    border-radius: 10px;
+}
+.main-top .dsa {
+    margin: auto;
+    font-size: 31px;
+    font-family: 'Lato';
+    padding: 69px 0 0 699px;
+}
+.main-top .asd {
+    font-size: 23px;
+    padding-left: 600px;
+    padding-top: 0px;
+    padding-bottom: 50px;
+    font-family: 'Sorts Mill Goudy';
+    margin: auto;
+}
+.web-des p {
+    padding: 0 0 10px 30px;
+    text-align: center;
+    margin: auto;
+    font-family: 'Lato';
+}
+.web-des img{
+	padding:30px 0 10px 175px;
+}
+.web-des hr {
+    width: 30px;
+    opacity: 60%;
+    margin-left: 185px;
+}

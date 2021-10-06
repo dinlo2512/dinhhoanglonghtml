@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS cơ bản phần 2</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var number1 = 8;
+		var number2 = 3;
+		//toán tử +
+		console.log(number1 - number2);
+		//chia lấy phần dư
+		console.log(number1 % number2);//kết quả dư 2
+		//tăng tích lũy
+		number1++;
+		console.log(number1);
+
+		var a = 5;
+		var sum = a++ + ++a;
+		console.log(sum);
+
+		//toán tử so sánh: kiểu dữ liệu boolen (true/fales)
+		var a = 5;
+		var b = 2;
+		console.log(a == b);//so sánh bằng
+		console.log(a != b)//so sánh khác
+
+		//toán tủ logic: 
+		//AND &&: (1 1 = 1)(1 0 = 0)(0 0 = 0) 
+		// OR ||: (1 1 = 1)(1 0 = 1)(0 0 = 0)   
+		//NOT ! : (1 = 0)(0 = 1)
+		//câu lệnh điều kiện:
+		//if : biểu thức điều kiện đúng thì làm gì
+		//if .... else 
+		var number = 5;
+			if (number % 2 == 0) 
+			{
+				console.log("number là số chẵn");
+			}else console.log("number là số lẻ");
+		//elseif... else
+		var point = 20;
+			if (point >= 8 && point <= 10){
+				console.log('Điểm giỏi');
+			}else if (point >= 6.5){
+				console.log('Điểm khá');
+			}else console.log('Điểm tb');
+		//switch case: các điều kiện 
+		var day = 4;
+		switch (day){
+			case 2:
+				console.log('thứ 2');break;
+			case 3: 
+				console.log('thứ 3'); break;
+			case 4: 
+				console.log('thứ 4');break;
+			default:
+				console.log('fsadsfdsdaf');
+		}
+		//vòng lặp:for, while, do while
+		for (var i=1; i<=10; i++){
+			console.log(i);
+		} 
+		j = 1;
+		while (j<= 10){
+			console.log(j);
+			j++;
+		}
+
+ 	</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bài tập JS phần 1</title>
+</head>
+<body>	
+	<form id="form" action="post" method="">
+		<h1>Form Information</h1>
+		<table>
+			<tr>
+				<td>Họ tên:</td>
+				<td><input type="text" class="input-name" placeholder="Nhập tên của bạn..."></td>
+			</tr>
+			<tr>
+				<td> Tuổi:</td>
+				<td> <input type="number" class="input-age" placeholder="Nhập tuổi của bạn..."></td>
+			</tr>
+		 	<tr>
+		 		<td></td>
+		 		<td><input type="submit" value="Hiển thị thông tin"></td>
+		 	</tr>
+		 	
+		</table>
+		<h4 id="h4-1"></h4>
+		 	<h4 id="h4-2"></h4>
+	</form>
+
+	<div>
+		Nhập tên:<input type="text" id="input-text">
+	</div>
+
+	<select id="country">
+		<option value="0">Việt Nam</option>
+		<option value="1">Nhật Bản</option>
+		<option value="2">China khựa</option>
+	</select>
+
+
+	<div> 
+		<form id="form-2"></form>
+	</div>
+	<script type="text/javascript">
+		
+		var obj_submit = document.querySelector('#form');
+		obj_submit.addEventListener('submit', function(){
+			
+			var name = document.querySelector('input[type=text]').value;
+			var age = document.querySelector('input[type=number]').value;
+			event.preventDefault();
+			var h4_1 = document.querySelector('#h4-1');
+			var h4_2 = document.querySelector('#h4-2');
+
+			h4_1.innerHTML = "Tên của bạn: " + name ;
+			h4_2.innerHTML = "tuổi: " + age ;
+
+			
+		});
+
+		var obj_keyup = document.querySelector('#input-text');
+		obj_keyup.addEventListener('keyup', function(){
+			var input_text = document.querySelector('#input-text').value;
+			alert('Nội dung bạn vừa nhập là: '+ input_text);
+		});
+
+		var obj_country = document.querySelector('#country');
+		obj_country.addEventListener('change', function(){
+			// var value = this.value;
+			// alert(value);
+			var text = this.options[this.selectedIndex].text;
+			alert('Bạn vừa chọn: '+ text);
+		});
+
+
+	</script>
+
+</body>
+</html>

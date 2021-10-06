@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hàm trong JS(function)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function showName(fullname){
+			console.log("Ten cua ban:" + fullname);
+		}
+		showName('Dinh Hoang Long');
+		function showAge(year){
+			var t ;
+			t = 2021 - year;
+			console.log("Tuoi cua ban:" + t);
+		}
+		showAge(2020);
+		function showAgereturn(age){
+			var result = "tuoi cua ban" + age ;
+			return result;
+		}
+		var show1 = showAgereturn(21);
+		console.log(show1);
+	//VD viết hàm tính tổng 3 số bất kỳ:
+		function sum(num1,num2,num3){
+			var S = num1 + num2 + num3;
+			return S;
+		}
+		var sums=sum(11,2,3);
+		console.log(sums);
+
+		// + Show nội dung ra mà hình 
+		document.write('Show text');
+		// + hàm debug 
+		console.log('console.log');
+		//+ hàm hiển thị popup cảnh báo 
+		alert('Tôi là ...');//xuống dòng trong hàm sử dụng \n:
+		var fullname = prompt('Nhập vào tên của bạn: ');
+		console.log(fullname);
+		// Hiển thị popup dạng xác nhận
+		var is_confirm =confirm('Bạn chắc chắn muốn xóa');
+		console.log(is_confirm);
+	</script>
+
+	<h1 class="h1-class">Thẻ h1</h1>
+	<h5 class="h1-class">Thẻ h1</h5>
+	<h2 id="h2-id">thẻ h2</h2>
+
+	<script type="text/javascript">
+		//lấy ra 1 đối tượng đầu tiên
+		var obj_h1 = document.querySelector('.h1-class');
+		console.log(obj_h1);	
+
+		//lấy ra tất cả các đôi tượng
+		var objs = document.querySelectorAll('.h1-class');
+		console.log(objs);
+
+		var obj_h2 = document.querySelector('#h2-id');
+		// obj_h2.innerHTML = "<u>Thẻ h2 gạch chân </u>"
+		// obj_h2.innerText = "<u>Thẻ h2 gạch chân </u>"
+		//Lấy nội dung hiện tại
+		var h2_content = obj_h2.innerText;
+		console.log(h2_content);
+		//đếm số ký tự của chuỗi
+		var str = "hellop";
+		var length = str.length;
+		console.log(length);
+
+		var h2_length = h2_content.length;
+		console.log(h2_length);
+
+		//gửi mail
+		window.open('mailto: dinhlong251200@gmail.com')
+	</script>
+</body>
+</html>

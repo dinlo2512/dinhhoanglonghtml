@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DEMO EVENT</title>
+</head>
+<body>
+	<h1 class="h1-click">Click để show popup</h1>
+	<select id="country">
+		<option value="0">HN</option>
+		<option value="1">ĐN</option>
+		<option value="2">HCM</option>
+	</select>
+
+	Nhập tên: <input type="text" name="" id="fullname">
+	<input type="number" name="">
+	<h2 id="error" style="color:red"></h2>
+
+
+	<script type="text/javascript">
+		window.addEventListener('load', function(){
+			var obj_h3 = document.querySelector('.h3');
+			obj_h3.addEventListener('click', function(){
+			alert('Đã click');
+		});
+		});
+	</script>
+
+	<h3 class="h3">click để show alert</h3>
+
+
+	<script type="text/javascript">
+		//các sự kiện cơ bản: 
+		// +onclick: ngay khi click HTML
+		// tham số đầu tiên là tên sự kiện bỏ on
+		// tham số thứ 2 là hàm không tham số function
+		var obj_click = document.querySelector('.h1-click');
+		obj_click.addEventListener('click', function(){
+			alert('clicked');
+		})
+		//+ onchange thay đổi khi select, checkbox,..
+		//this.value tham chiếu đến đúng obj hiện tại 
+		var obj_country = document.querySelector('#country');
+		obj_country.addEventListener('change', function(){
+			var value = this.value;
+			// alert(value);
+			var text = this.options[this.selectedIndex].text;
+			alert(text);
+		});
+		//+ onmouseenter
+		var obj_input = document.querySelector('input[type=text]');
+		obj_input.addEventListener('mouseenter', function(){
+			this.style = "background: red";
+		});
+		obj_input.addEventListener('mouseleave', function(){
+			this.style = "background: white";
+		});
+		//nhấn 1 phím trên bàn phím +onkeyup
+		//ví dụ onkeyup nhập nhiều hơn 4 ký tự
+		var obj_fullname = document.querySelector('#fullname');
+		obj_fullname.addEventListener('keyup',function(){
+			var value = this.value;
+			if (value.length < 4) {
+				var error = "Phải nhập hơn 4 ký tự"
+				var obj_error = document.querySelector('#error');
+				obj_error.innerHTML = error;
+			}
+			else {
+				var obj_error = document.querySelector('#error');
+				obj_error.innerHTML = '' ;
+				console.log('giá trị hiện tại ' + value);
+			}
+			
+		});
+	</script>
+</body>
+</html>

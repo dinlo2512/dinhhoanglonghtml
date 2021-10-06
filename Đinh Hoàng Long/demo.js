@@ -1,0 +1,1 @@
+alert('File demo.js được tải');

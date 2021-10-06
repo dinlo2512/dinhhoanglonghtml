@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1" >
+	<meta charset="utf-8">
+	<title>demo_responsive</title>
+</head>
+<body>
+	<style type="text/css">
+		.title{
+			color:red;
+
+		}
+		@media(min-width:768px) and (max-width:1023px){
+			.title{
+				color: yellow;
+			}
+		}
+		@media(max-width:767px){
+			.title{
+				color: green;
+			}
+		}
+	</style>
+	<h1 class="title">Màu text sẽ thay đổi trên từng thiết bị</h1>
+</body>
+</html>
