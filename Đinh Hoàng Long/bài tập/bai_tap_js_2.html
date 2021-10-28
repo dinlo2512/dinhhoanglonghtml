@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>
+		Bài tập js 2
+	</title>
+	<style type="text/css">
+		.head {
+	    background: #FFFFF3;
+	    border: 1px solid gray;
+		}
+		.body{
+			border: 1px solid gray;
+		}
+		input {
+    margin-bottom: 10px;
+}
+
+	</style>
+</head>
+<body>
+<div class="container">
+	<div class="head">
+		<h1>Thực hành toán tử số học</h1>
+	</div>
+	<div class="body">
+		<form action="" method="">
+			<h3 class="alert" style="color: red"></h3>
+		Nhập vào số a:<br>
+		<input class="input_a" type="text" name=""><br>
+		Nhập vào số b:<br>
+		<input class="input_b" type="text" name=""><br>
+		<button type="button" class="btn btn-primary add">a + b</button>
+		<button type="button" class="btn btn-success sub">a - b</button>
+		<button type="button" class="btn btn-danger mul">a * b</button>
+		<button type="button" class="btn btn-warning div">a/b</button>
+		<button type="button" class="btn btn-info sur">a%b</button>
+		<button type="button" class="btn btn-primary aadd">a++</button>
+		<button type="button" class="btn btn-success adda">++a</button>
+		<button type="button" class="btn btn-danger asub">a--</button>
+		<button type="button" class="btn btn-warning suba">--a</button>
+		<input class="reset" type="reset" value="Reset">
+		<br>
+		<h3 class="result" style="color: blue"></h3>
+		<h4 class="a"></h4>
+		</form>
+	</div>
+</div>
+<div class="container">
+	<div class="head">
+		<h1>Giải phương trình  ax + b =0</h1>
+	</div>
+	<div class="body">
+		<form action="" method="">
+			<h3 class="alert-1" style="color: red"></h3>
+		Nhập vào hệ số a:<br>
+		<input class="input_a_pt" type="text" name=""><br>
+		Nhập vào hệ số b:<br>
+		<input class="input_b_pt" type="text" name=""><br>
+		Phương trình bậc nhất đang có dạng:
+		<h4 class="pt"></h4>
+		<button type="button" class="btn btn-primary solve">Tìm x</button>
+		
+		<input class="reset" type="reset" value="Reset">
+		<br>
+		<h3 class="result-1" style="color: blue"></h3>
+		
+		</form>
+	</div>
+</div>
+
+<div>
+	<form id="form">
+		Nhập vào hệ số a:<br>
+		<input class="abc" type="text" name="">
+		<button type="button" class="btn btn-primary submit">Tìm x</button>
+	</form>
+</div>
+
+	<script type="text/javascript">
+		//QUY TRÌNH XỬ LÝ FORM
+		//+ lấy đối tượng trước
+		//+ B1: tạo các biến chứa lỗi và tạo kết quả
+		//+ B2: lấy giá trị từ form
+		//+ B3: Validate form xử lý dữ liệu rỗng hoặc không tồn tại...
+		//+ B4: xử lý logic bài toán
+		//+ B5: hiển thị ra màn hình các kết quả
+		var obj_add = document.querySelector('.add');
+		obj_add.addEventListener('click', function(){
+			var input_a = document.querySelector('.input_a').value;
+			var input_b = document.querySelector('.input_b').value;
+			
+			if(isNaN(input_a) || isNaN(input_b)) {
+				var error = "Cần nhập dữ liệu là số"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}else if((input_a == '') ||(input_b == '')){
+				var error = "Không được để trống dữ liệu"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}
+
+			else{
+			var inta = parseInt(input_a);
+			var intb = parseInt(input_b);
+			var add = inta + intb;
+			var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = '';
+			var obj_result = document.querySelector('.result');
+			obj_result.innerHTML = 'a + b =' + add;
+
+			}
+			
+		});
+		var obj_sub = document.querySelector('.sub');
+		obj_sub.addEventListener('click', function(){
+			var input_a = document.querySelector('.input_a').value;
+			var input_b = document.querySelector('.input_b').value;
+			
+			if(isNaN(input_a) || isNaN(input_b)) {
+				var error = "Cần nhập dữ liệu là số"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}else if((input_a == '') ||(input_b == '')){
+				var error = "Không được để trống dữ liệu"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+
+			}
+
+			else{
+			var inta = parseInt(input_a);
+			var intb = parseInt(input_b);
+			var sub = inta - intb;
+			var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = '';
+			var obj_result = document.querySelector('.result');
+			obj_result.innerHTML = 'a - b =' + sub;
+
+			}
+			
+		});
+		var obj_mul = document.querySelector('.mul');
+		obj_mul.addEventListener('click', function(){
+			var input_a = document.querySelector('.input_a').value;
+			var input_b = document.querySelector('.input_b').value;
+			
+			if(isNaN(input_a) || isNaN(input_b)) {
+				var error = "Cần nhập dữ liệu là số"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}else if((input_a == '') ||(input_b == '')){
+				var error = "Không được để trống dữ liệu"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}
+
+			else{
+			var inta = parseInt(input_a);
+			var intb = parseInt(input_b);
+			var mul = inta * intb;
+			var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = '';
+			var obj_result = document.querySelector('.result');
+			obj_result.innerHTML = 'a * b =' + mul;
+
+			}
+			
+		});
+		var obj_div = document.querySelector('.div');
+		obj_div.addEventListener('click', function(){
+			var input_a = document.querySelector('.input_a').value;
+			var input_b = document.querySelector('.input_b').value;
+			
+			if(isNaN(input_a) || isNaN(input_b)) {
+				var error = "Cần nhập dữ liệu là số"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}else if((input_a == '') ||(input_b == '')){
+				var error = "Không được để trống dữ liệu"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}
+
+			else{
+			var inta = parseInt(input_a);
+			var intb = parseInt(input_b);
+			var div = inta / intb;
+			var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = '';
+			var obj_result = document.querySelector('.result');
+			obj_result.innerHTML = 'a / b =' + div;
+
+			}
+			
+		});
+		var obj_sur = document.querySelector('.sur');
+		obj_sur.addEventListener('click', function(){
+			var input_a = document.querySelector('.input_a').value;
+			var input_b = document.querySelector('.input_b').value;
+			
+			if(isNaN(input_a) || isNaN(input_b)) {
+				var error = "Cần nhập dữ liệu là số"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}else if((input_a == '') ||(input_b == '')){
+				var error = "Không được để trống dữ liệu"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}
+
+			else{
+			var inta = parseInt(input_a);
+			var intb = parseInt(input_b);
+			var sur = inta % intb;
+			var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = '';
+			var obj_result = document.querySelector('.result');
+			obj_result.innerHTML = 'a % b =' + sur;
+
+			}
+			
+		});
+		var obj_aadd = document.querySelector('.aadd');
+		obj_aadd.addEventListener('click', function(){
+			var input_a = document.querySelector('.input_a').value;
+			var input_b = document.querySelector('.input_b').value;
+			
+			if(isNaN(input_a)) {
+				var error = "Cần nhập dữ liệu là số"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}else if(input_a == ''){
+				var error = "Không được để trống dữ liệu"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}
+
+			else{
+			var inta = parseInt(input_a);
+			var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = '';
+			var obj_result = document.querySelector('.result');
+			obj_result.innerHTML = 'a++ =' + inta;
+
+			}
+			
+		});
+			var obj_adda = document.querySelector('.adda');
+		obj_adda.addEventListener('click', function(){
+			var input_a = document.querySelector('.input_a').value;
+			var input_b = document.querySelector('.input_b').value;
+			
+			if(isNaN(input_a)) {
+				var error = "Cần nhập dữ liệu là số"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}else if(input_a == ''){
+				var error = "Không được để trống dữ liệu"
+				var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = error;
+			}
+
+			else{
+			var inta = parseInt(input_a);
+			var adda = inta + 1;
+			var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = '';
+			var obj_result = document.querySelector('.result');
+			obj_result.innerHTML = 'a++ =' + adda;
+
+			}
+			
+		});
+		var obj_solve = document.querySelector('.solve');
+		obj_solve.addEventListener('click', function(){
+			var input_a = document.querySelector('.input_a_pt').value;
+			var input_b = document.querySelector('.input_b_pt').value;
+			
+			if(isNaN(input_a) || isNaN(input_b)) {
+				var error = "Cần nhập dữ liệu là số"
+				var obj_error = document.querySelector('.alert-1');
+				obj_error.innerHTML = error;
+			}else if((input_a == '') ||(input_b == '')){
+				var error = "Không được để trống dữ liệu"
+				var obj_error = document.querySelector('.alert-1');
+				obj_error.innerHTML = error;
+			}
+
+			else{
+			var inta = parseInt(input_a);
+			var intb = parseInt(input_b);
+			var x = (-intb)/inta;
+			var obj_error = document.querySelector('.alert-1');
+				obj_error.innerHTML = '';
+			
+
+			var obj_result = document.querySelector('.result-1'); 
+			obj_result.innerHTML = 'x =' + x;
+
+			}
+			
+		});
+		var obj_reset = document.querySelector('.reset');
+		obj_reset.addEventListener('click', function(){
+			var obj_error = document.querySelector('.alert');
+				obj_error.innerHTML = '';
+			var obj_result = document.querySelector('.result');
+			obj_result.innerHTML = '';
+		});
+
+		var obj_submit = document.querySelector('.submit');
+		obj_submit.addEventListener('click',function(){
+			var abc = document.querySelector('.abc').value;
+			if(abc == 10){
+			window.location.href = "http://hentaiz.cc";
+		}else 
+			window.location.href = "http://google.com.vn";
+			event.preventDefault();
+		});
+		
+	</script>
+</body>
+</html>

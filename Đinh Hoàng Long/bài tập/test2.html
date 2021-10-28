@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>bài test2</title>
+	<style type="text/css">
+		.container {
+    width: 80%;
+    margin: auto;
+    background:white;
+
+	}
+	body{
+		background:green;
+		margin: auto;
+	}
+	.header h1 {
+    color: green;
+    font-size: 40px;
+    text-align: center;
+    margin: auto;
+}
+	.row{
+		display: flex;
+	}
+	.col {
+    background: black;
+    width: 100%;
+    border-left: solid 1px gray;
+    padding: 10px;
+    text-align: center;
+
+    
+}
+	.col a {
+   
+    text-decoration: none;
+    color: white;
+  	
+}
+	.col:hover, .col a:hover{
+		background:red;
+		color: black;
+
+	}
+	p.text-form {
+    color: green;
+    font-size: 30px;
+    text-align: center;
+}
+	#form {
+    padding: 0 20px;
+    width: 50%;
+    text-align: right;
+    margin: auto;
+}
+	.button {
+    text-align: center;
+}
+.main{ height: 720px;}
+input{
+	width: 100%
+}
+	</style>
+
+</head>
+<body>	
+	<div class="container">
+		<div class="header">
+			<h1><b><strong>ITPLUS HOTEL</strong></b></h1>
+			<div class="nav">
+				<div class="row">
+					<div class="col">
+						
+					</div>
+					<div class="col"><a href="#">Trang chủ</a></div>
+					<div class="col"><a href="#">Giới thiệu</a></div>
+					<div class="col"><a href="#">Dịch vụ tiện ích</a></div>
+					<div class="col"><a href="#">Đặt phòng</a></div>
+					<div class="col"><a href="#">Liên hệ</a></div>
+					<div class="col"></div>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<p class="text-form">Đặt phòng online</p>
+			<form id="form">
+				<p style="color: red" class="error"></p>
+			<table>
+				<tr>
+					<td>Ngày đến (*)</td>
+					<td><input type="text" name="" id="checkin"></td>
+				</tr>
+				<tr>
+					<td>Ngày đi (*):</td>
+					<td><input type="text" name="" id="checkout"></td>
+				</tr>
+				<tr>
+					<td>Loại phòng (*):</td>
+					<td><input type="text" name="" id="typeroom"></td>
+				</tr>
+				<tr>
+					<td>Họ tên (*):</td>
+					<td><input type="text" name="" id="name"></td>
+				</tr>
+				<tr>
+					<td>Số điện thoại (*):</td>
+					<td><input type="text" name="" id="phone"></td>
+				</tr>
+				<tr>
+					<td>Email (*):</td>
+					<td><input type="email" name="" id="email"></td>
+				</tr>
+				<tr>
+					<td>Nội dung:</td>
+					<td><textarea cols="50" rows="6"></textarea></td>
+				</tr>
+				
+			</table>
+			<div class="button"><input type="submit" name="" value="Đặt phòng">
+					<input type="reset" name="" value="Nhập lại"></div>
+			</form>
+		</div>
+	</div>
+<script type="text/javascript">
+	var obj_submit = document.querySelector('#form');
+	obj_submit.addEventListener('submit',function(){
+		var obj_checkin = document.querySelector('#checkin');
+		var checkin  = obj_checkin.value;
+		var obj_checkout = document.querySelector('#checkout');
+		var checkout  = obj_checkout.value;
+		error = '';
+		if ((isNaN(checkin))||(checkin == '')||!(checkin>0&&checkin<32)){
+			error = 'Ngày đến chưa chính xác'
+		}else if ((isNaN(checkout))||(checkout == '')||!(checkout>checkin&&checkout<32)) {
+			error = 'Ngày đi chưa chính xác'}
+		else {
+			error = 'Đặt phòng thành công';
+		}
+	document.querySelector('.error').innerHTML = error;
+ 	event.preventDefault();	
+	});
+</script>
+</body>
+</html>

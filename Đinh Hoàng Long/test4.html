@@ -1,0 +1,36 @@
+<script type="text/javascript">
+	var obj_form = document.querySelector('#form');
+	obj_form.addEventListener('submit',function(){
+
+		var error = '';
+		var result = '';
+
+		var obj_fullname = document.querySelector('#fullname');
+		fullname = obj_fullname.value;
+
+		var obj_email = document.querySelector('#fullname');
+		email = obj_email.value;
+
+		
+		//validate form
+		if (fullname == ''){
+			error = 'Phải nhập tên';
+			obj_fullname.focus();
+		}else if(validateEmail(email) == false){
+			error = 'email chưa đúng định dạng'
+			obj_email.focus();
+		}else if(phone.length < 10 ){
+			error = 'số đt phải >=10 ký tự' ;
+			obj_phone.focus();
+		}
+		document.querySelector('#error').innerHTML = error;
+	document.querySelector('#result').innerHTML = result;
+	event.preventDefault();
+	});
+
+	function validateEmail(){
+		 const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+	}
+	
+</script>

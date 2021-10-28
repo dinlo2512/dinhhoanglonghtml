@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Send e-mail to someone@example.com:</h2>
+
+<form action="mailto:someone@example.com" method="post" id="form">
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Comment:<br>
+<input type="text" name="comment" size="50"><br><br>
+<input type="submit" value="Send" >
+<input type="reset" value="Reset">
+</form>
+
+<script type="text/javascript">
+	var obj_submit = document.querySelector('#form');
+	obj_submit.addEventListener('submit',function(){
+
+		window.open('mailto:atches251@gmail.com');
+	});
+	
+</script>
+</body>
+</html>

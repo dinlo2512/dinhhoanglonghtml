@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<meta charset="utf-8">
+	<title>Bài 2</title>
+	<style type="text/css">
+		.container{
+			padding-top: 50px
+		}
+		input[type="text"] {
+    width: 100%;
+	}
+	p {
+    margin: auto;
+}
+	.button{
+		padding : 20px 0;
+	}
+	.error{color: red;}
+	.result{color: blue;}
+	</style>
+</head>
+<body>	
+	<div class="container">
+	<h3 class="error"></h3>
+	<p>Nhập số cần kiểm tra chẵn lẻ:</p><br>
+	<input type="text" id="input"><br>
+	<div class="button">
+	<button type="button" class="btn btn-primary submit">Kiểm tra</button></div>
+	<h3 class="result"></h3>
+	</div>
+
+	<script type="text/javascript">
+		obj_click = document.querySelector('.submit');
+		obj_click.addEventListener('click',function(){
+			var obj_input = document.querySelector('#input');
+			var input = obj_input.value;
+
+			var error = '';
+			var result = '';
+			if((isNaN(input))||(input == '')){
+				error = 'Số nhập vào chưa chính xác !';
+				obj_input.focus();
+				result = '';
+			}
+			else{
+				error = '';
+					if(input % 2 == 0){
+						result = 'Đây là số chẵn';
+					}else {
+						result = 'Đây là số lẻ'; 
+					}
+
+				
+
+			}
+			document.querySelector('.error').innerHTML = error;
+			document.querySelector('.result').innerHTML = result;
+		});
+
+	</script>
+</body>
+</html>

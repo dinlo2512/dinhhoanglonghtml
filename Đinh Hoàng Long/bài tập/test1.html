@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../CSS/fontawesome-free-5.15.4-web/css/all.min.css">
+	<!-- <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/> -->
+	<title>bài test 1</title>
+	<style type="text/css">
+		.logo {
+	    border: solid 1px;
+	    text-align: center;
+		}
+		.banner {
+			border: solid 1px;
+			  text-align: center;
+}
+		.nav{
+			border: solid 1px;
+			background:#666666;
+		}
+		.a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px;
+
+}
+	
+	.table-left td {
+    border: solid;
+    padding-right: 85px;
+    background: #33CC33;
+}
+.main-header {
+    text-align: center;
+    color: #090;
+    font-size: 24px;
+}
+.subm {
+    text-align: center;
+}
+input[type="text"] {
+    margin-left: 110px;
+}
+input[type="radio"] {
+    margin-left: 10px;
+}
+input[type="checkbox"] {
+    margin-left: 10px;
+}
+input[type="email"] {
+    margin-left: 110px;
+}
+.sex{padding-left: 100px}
+textarea{
+	margin-left: 110px;
+}
+.bg{
+	background-image: url(../pic/002.gif);
+	background-repeat: no-repeat;
+	}
+img {
+    width: 150px;
+    margin-top: 211px;
+    box-shadow: 7px 6px 3px 3px rgba(0,0,0,0.68);
+}
+
+	</style>
+
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div class="row">
+				<div class="col-md-3 logo">
+				<h1><strong>logo area</strong></h1>
+				</div>
+				<div class="col-md-9 banner">
+				<h1><strong>Banner area</strong></h1>
+				<div class="row">
+					<div class="col-md-3 nav">
+						<a href="#" class="a"><b>Trang chủ</b></a>
+					</div>
+					<div class="col-md-3 nav">
+						<a href="#" class="a"><b>Đăng ký</b></a>
+					</div>
+					<div class="col-md-3 nav">
+						<a href="#" class="a"><b>Hướng dẫn</b></a>
+					</div>
+					<div class="col-md-3 nav">
+						<a href="#" class="a"><b>Giới thiệu</b></a>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		 <div class="main">
+		 	<div class="row">
+		 		<div class="col-md-4 bg">
+		 			<table class="table-left">
+		 				<tr>
+		 					<td></td>
+		 					<td>Du lịch Hạ Long</td>
+		 				</tr>
+		 				<tr>
+		 					<td></td>
+		 					<td>Du lịch Sapa</td>
+		 				</tr>
+		 				<tr>
+		 					<td></td>
+		 					<td>Du lịch Đà Lạt</td>
+		 				</tr>
+		 			</table>
+		 			<img src="../pic/20.jpg">
+		 		</div>
+		 		<div class="col-md-8">
+		 			<div class="main-header"><p>Đăng kí tour du lịch</p></div>
+		 			<form id="form">
+		 			<table>
+		 				<p style="color: red " class="error"></p>
+		 				<tr>
+		 					<td>Họ tên (*)</td>
+		 					<td><input type="text" id="name" ></td>
+		 				</tr>
+		 				<tr>
+		 					<td>Giới tính (*)</td>
+		 					<td class="sex"><input type="radio" name="gender" value="1" id="male">Nam
+		 						<input type="radio" name="gender" value="0" id="female">Nữ</span></td>
+		 				</tr>
+		 				<tr>
+		 					<td>Địa chỉ (*)</td>
+		 					<td><input type="text" id="address"></td>
+		 				</tr>
+		 				<tr>
+		 					<td>Điện thoại (*)</td>
+		 					<td><input type="text" id="phone"></span></td>
+		 				</tr>
+		 				<tr>
+		 					<td>Email (*)</td>
+		 					<td><input type="email" id="email"></span></td>
+		 				</tr>
+		 				<tr>
+		 					<td>Chọn tour</td>
+		 					<td class="sex"><input name="vec" type="checkbox" value="1" onclick="checkOne(0)" >Hạ Long
+		 						<input name="vec" type="checkbox" value="2" onclick="checkOne(1)">Sapa
+		 						<input name="vec" type="checkbox" value="3" onclick="checkOne(2)">Đà Lạt
+		 					</td>
+		 				</tr>
+		 				<tr>
+		 					<td>Phương tiện</td>
+		 					<td class="sex"><select id="sel">
+		 						<option>Chọn phương tiện</option>
+		 						<option value="1" >Ôtô</option>
+		 						<option value="2">Tàu hỏa</option>
+		 						<option value="3">Máy bay</option>
+		 					</select></td>
+		 				</tr>
+		 				<tr>
+		 					<td>Thông tin khác</td>
+		 					<td><textarea cols="50" rows="6"></textarea></td>
+		 				</tr>
+		 			</table>
+		 			<div class="subm">
+		 			<input type="submit" value="Đăng ký" id="submit" >
+		 			<input type="reset" value="Nhập lại" id="reset">
+		 			</div>
+ 		 			</form>
+		 		</div>
+		 	</div>	
+		 </div>
+</div>
+
+<script type="text/javascript">
+	
+var obj_submit = document.querySelector('#form');
+obj_submit.addEventListener('submit',function(){
+	var obj_name = document.querySelector('#name');
+	var name = obj_name.value;
+	var obj_address = document.querySelector('#address');
+	var address = obj_address.value;
+	var obj_phone = document.querySelector('#phone');
+	var phone = obj_phone.value;
+	var obj_email = document.querySelector('#email');
+	var email = obj_email.value;
+	var obj_gender = document.getElementsByName('gender');
+ 	var male = obj_gender[0].checked; 
+ 	var female = obj_gender[1].checked;
+		var error = '';
+	var obj_vec = document.getElementsByName('vec');
+		var halong = obj_vec[0].checked;
+		var sapa = obj_vec[1].checked;
+		var dalat = obj_vec[2].checked;
+	var obj_sel	= document.querySelector('#sel');
+		var sel1 = obj_sel[1].selected;
+		var sel2 = obj_sel[2].selected;
+		var sel3 = obj_sel[3].selected;
+
+	if (name == ''){
+			error = ' * Không để trống họ tên!'
+			obj_name.style.background = '#FED600'; obj_name.focus();
+		}else if (!(obj_gender[0].checked)&&(!obj_gender[1].checked)){
+			error = ' * Hãy chọn giới tính!'
+		}else if (address == ''){
+			error = ' * Không được để trống địa chỉ!'
+			obj_address.focus();
+			
+		}else if ((isNaN(phone))||(phone == '')){
+			error = '* Số điện thoại không chính xác!'
+			obj_phone.focus();
+		}
+		else if (email == ''){
+			error = '* Không được để trống email!'
+			obj_email.focus();
+		}
+		else if ((halong && sel3)||(sapa && sel3)){
+		error = ' * Không có phương tiện Máy Bay cho tour này ';
+
+	} else if (!(halong || sapa || dalat)){
+		error = '* Chọn ít nhất một tour';	
+	}else if (!(sel1 || sel2 || sel3)){
+		error = '* Chọn ít nhất một phương tiện';
+		
+	}
+	else {
+		error =  'Thành công!!!';
+		// window.open('mailto:dinhlong251200@gmail.com')
+		window.location.href = 'https://google.com.vn';
+
+	}
+
+
+
+
+  	document.querySelector('.error').innerHTML = error;
+
+	 event.preventDefault();	
+	
+	
+		
+	});
+
+	var obj_keyup = document.querySelector('#form');
+	obj_keyup.addEventListener('keyup',function(){
+	var obj_name = document.querySelector('#name');	
+		obj_name.style.background = '#fff';
+	
+	})
+	 var obj_reset = document.querySelector('#reset');
+	 obj_reset.addEventListener('click',function(){
+	 	var obj_name = document.querySelector('#name');
+	 	document.querySelector('.error').innerHTML = '';
+	 	obj_name.style.background = '#fff';
+
+	 });
+	 
+	
+	// function checkOne(j){	
+	// 	var total = 0;
+	// 	var obj_tour = document.getElementsByName('vec');
+	// 	for (var i=0;i<obj_tour.length;i++){
+	// 		if (obj_tour[i].checked)
+	// 			{ total =total + 1;}
+	// 	}if (total >1){
+	// 		alert('chỉ được chọn 1 tour!')	;
+	// 		obj_tour[j].checked =false;
+	// 	}
+	// 	return false;
+	// }
+	
+
+	 
+		
+	
+</script>
+</body>
+</html>
